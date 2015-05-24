@@ -13,14 +13,9 @@
 	// Disable post prefetching to keep view counts accurate
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
 
-	// Enable post view tracking
-	add_action( 'wp_head', 'bamboo_most_read_track_post_views' );
-
-	// Register the widget
-	add_action( 'widgets_init', 'register_bamboo_most_read' );
-
 /**************************************************************************************************/
 
+	// Enable post view tracking
 	function bamboo_most_read_track_post_views( $post_id ) {
 
 		if( !is_single() ) {
@@ -43,14 +38,17 @@
 	    }
 
 	}
+	add_action( 'wp_head', 'bamboo_most_read_track_post_views' );
 
 /**************************************************************************************************/
 
+	// Register the widget
 	function register_bamboo_most_read() {
 
 		register_widget( 'Bamboo_Most_Read' );
 
 	}
+	add_action( 'widgets_init', 'register_bamboo_most_read' );
 
 /**************************************************************************************************/
 
