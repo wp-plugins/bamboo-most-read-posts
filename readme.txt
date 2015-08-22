@@ -1,5 +1,5 @@
 === Bamboo Most Read Posts ===
-Contributors: Bamboo Solutions
+Contributors: bamboosolutions
 Donate link: http://www.bamboosolutions.co.uk
 Tags: most read posts
 Requires at least: 3.0.1
